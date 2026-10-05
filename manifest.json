@@ -1,7 +1,49 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-05T22:35:23Z",
+  "updatedAt": "2026-10-05T23:07:46Z",
   "images": [
+    {
+      "id": "wm-99933003",
+      "source": "wikimedia",
+      "title": "File:Silhouette of a fisherman standing on his pirogue at sunset with orange clouds in Don Det Si Phan Don Laos.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-99933003.jpg",
+      "width": 2560,
+      "height": 1600,
+      "bytes": 556873,
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Silhouette_of_a_fisherman_standing_on_his_pirogue_at_sunset_with_orange_clouds_in_Don_Det_Si_Phan_Don_Laos.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
+      "id": "wm-97105709",
+      "source": "wikimedia",
+      "title": "File:Baumsilhouetten am Uetliberg mit Novembernebel und Sonnenstrahlen.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-97105709.jpg",
+      "width": 2560,
+      "height": 1707,
+      "bytes": 1079918,
+      "author": "Kuhnmi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Baumsilhouetten_am_Uetliberg_mit_Novembernebel_und_Sonnenstrahlen.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
+      "id": "wm-9533130",
+      "source": "wikimedia",
+      "title": "File:Lake Vuoksa 1.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-9533130.jpg",
+      "width": 2560,
+      "height": 1707,
+      "bytes": 768282,
+      "author": "Dmitry A. Mottl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Lake_Vuoksa_1.jpg",
+      "addedAt": "2026-10-05"
+    },
     {
       "id": "wm-92114205",
       "source": "wikimedia",
@@ -185,6 +227,20 @@
       "addedAt": "2026-10-05"
     },
     {
+      "id": "wm-44218653",
+      "source": "wikimedia",
+      "title": "File:2015 Spullersee im Lechquellengebirge.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-44218653.jpg",
+      "width": 2560,
+      "height": 1417,
+      "bytes": 763884,
+      "author": "Böhringer",
+      "license": "CC BY-SA 3.0 at",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:2015_Spullersee_im_Lechquellengebirge.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
       "id": "wm-41011032",
       "source": "wikimedia",
       "title": "File:Spechtensee gegen Westen 01.JPG",
@@ -269,6 +325,20 @@
       "addedAt": "2026-10-05"
     },
     {
+      "id": "wm-32123985",
+      "source": "wikimedia",
+      "title": "File:2014 Paczków, staw.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-32123985.jpg",
+      "width": 2560,
+      "height": 1537,
+      "bytes": 390245,
+      "author": "Jacek Halicki",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2014_Paczk%C3%B3w,_staw.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
       "id": "wm-178802078",
       "source": "wikimedia",
       "title": "File:Fanal (Madeira, Portugal), Lorbeerwald -- 2025 -- 1532.jpg",
@@ -325,6 +395,20 @@
       "addedAt": "2026-10-05"
     },
     {
+      "id": "wm-110894397",
+      "source": "wikimedia",
+      "title": "File:National road 970 and river Teno near Gistugurra, Utsjoki, Lapland, Finland, 2021 September.jpg",
+      "url": "https://github.com/chimd715/extreme-wallpapers/releases/download/library/wm-110894397.jpg",
+      "width": 2560,
+      "height": 1693,
+      "bytes": 1424676,
+      "author": "Ximonic (Simo Räsänen)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:National_road_970_and_river_Teno_near_Gistugurra,_Utsjoki,_Lapland,_Finland,_2021_September.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
       "id": "wm-105559307",
       "source": "wikimedia",
       "title": "File:Dülmen, Rorup, NSG Roruper Holz -- 2021 -- 8187-91.jpg",
@@ -336,6 +420,34 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "page": "https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Rorup,_NSG_Roruper_Holz_--_2021_--_8187-91.jpg",
+      "addedAt": "2026-10-05"
+    },
+    {
+      "id": "us-iW5MaQKTU6w",
+      "source": "unsplash",
+      "title": "Whole and halved figs on a beige linen cloth against a dark background",
+      "url": "https://images.unsplash.com/photo-1790293840932-a568128dbb1f?ixid=M3wxMDkzOTQwfDB8MXx0b3BpY3x8Ym84alFLVGFFMFl8fHx8fDJ8fDE3OTEyNDE2NTl8&ixlib=rb-4.1.0&w=2560&q=82&fm=jpg&fit=max",
+      "width": 2560,
+      "height": 1708,
+      "author": "Heather Newsom",
+      "authorUrl": "https://unsplash.com/@native7photo?utm_source=extreme&utm_medium=referral",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "page": "https://unsplash.com/photos/figs-on-beige-linen-cloth-iW5MaQKTU6w?utm_source=extreme&utm_medium=referral",
+      "addedAt": "2026-10-05"
+    },
+    {
+      "id": "us-3lSdgBnv9ag",
+      "source": "unsplash",
+      "title": "The North America Nebula glowing with orange and grey gas clouds among scattered stars",
+      "url": "https://images.unsplash.com/photo-1790523069334-8cc3d26605f7?ixid=M3wxMDkzOTQwfDB8MXx0b3BpY3x8Ym84alFLVGFFMFl8fHx8fDJ8fDE3OTEyNDE2NTl8&ixlib=rb-4.1.0&w=2560&q=82&fm=jpg&fit=max",
+      "width": 2560,
+      "height": 1765,
+      "author": "wallace Henry",
+      "authorUrl": "https://unsplash.com/@ghostdogg187?utm_source=extreme&utm_medium=referral",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "page": "https://unsplash.com/photos/north-america-nebula-with-gas-clouds-3lSdgBnv9ag?utm_source=extreme&utm_medium=referral",
       "addedAt": "2026-10-05"
     }
   ]
