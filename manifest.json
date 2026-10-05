@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-05T23:07:46Z",
+  "updatedAt": "2026-10-05T23:09:39Z",
   "images": [
     {
       "id": "wm-99933003",
@@ -420,20 +420,6 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "page": "https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Rorup,_NSG_Roruper_Holz_--_2021_--_8187-91.jpg",
-      "addedAt": "2026-10-05"
-    },
-    {
-      "id": "us-iW5MaQKTU6w",
-      "source": "unsplash",
-      "title": "Whole and halved figs on a beige linen cloth against a dark background",
-      "url": "https://images.unsplash.com/photo-1790293840932-a568128dbb1f?ixid=M3wxMDkzOTQwfDB8MXx0b3BpY3x8Ym84alFLVGFFMFl8fHx8fDJ8fDE3OTEyNDE2NTl8&ixlib=rb-4.1.0&w=2560&q=82&fm=jpg&fit=max",
-      "width": 2560,
-      "height": 1708,
-      "author": "Heather Newsom",
-      "authorUrl": "https://unsplash.com/@native7photo?utm_source=extreme&utm_medium=referral",
-      "license": "Unsplash License",
-      "licenseUrl": "https://unsplash.com/license",
-      "page": "https://unsplash.com/photos/figs-on-beige-linen-cloth-iW5MaQKTU6w?utm_source=extreme&utm_medium=referral",
       "addedAt": "2026-10-05"
     },
     {
