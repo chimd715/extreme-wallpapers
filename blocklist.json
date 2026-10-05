@@ -1,4 +1,6 @@
 {
   "comment": "사진첩에 넣지 않을 사진. 위키미디어는 \"File:...\" 제목, Unsplash는 \"us-<사진 ID>\".",
-  "items": []
+  "items": [
+    "us-iW5MaQKTU6w"
+  ]
 }

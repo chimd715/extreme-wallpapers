@@ -57,6 +57,11 @@ ALLOWED_LICENSES = ("CC BY-SA", "CC BY", "CC0", "Public domain", "FAL")
 MIN_SOURCE_WIDTH = 3000
 RATIO_RANGE = (1.45, 1.9)    # 가로 화면에 꽉 차는 비율만
 UNSPLASH_TOPICS = ["wallpapers", "nature"]
+# Unsplash 주제에는 음식·제품 사진도 섞여 있어서, 사진 설명에 풍경 단어가 있는 것만 고른다
+LANDSCAPE_WORDS = re.compile(
+    r"\b(mountains?|peaks?|lakes?|sea|seas|ocean|coast(line)?|beach(es)?|shore|waves?|forests?|woods|trees|river|valley|"
+    r"canyon|desert|dunes?|snow(y)?|glacier|waterfalls?|clouds?|sky|skies|sunsets?|sunrise|dawn|dusk|landscape|hills?|"
+    r"fields?|meadow|island|cliffs?|fjord|aurora|northern lights|milky way|stars|starry|galaxy|nebula|volcano)\b", re.I)
 UNSPLASH_UTM = "utm_source=extreme&utm_medium=referral"
 
 
@@ -243,8 +248,10 @@ def unsplash_candidates(key, seen):
         for photo in fetch_json(url, headers):
             entry_id = "us-" + photo["id"]
             ratio = photo["width"] / photo["height"]
+            text = " ".join(filter(None, [photo.get("alt_description"), photo.get("description")]))
             if (entry_id in seen or photo.get("premium") or photo.get("plus")
-                    or photo["width"] < MIN_SOURCE_WIDTH or not RATIO_RANGE[0] <= ratio <= RATIO_RANGE[1]):
+                    or photo["width"] < MIN_SOURCE_WIDTH or not RATIO_RANGE[0] <= ratio <= RATIO_RANGE[1]
+                    or not LANDSCAPE_WORDS.search(text)):
                 continue
             seen.add(entry_id)
             picks.append(photo)
@@ -316,7 +323,7 @@ def build_archive(entries, today, folder, existing_names):
 
 # -- 실행 ------------------------------------------------------------------------------
 
-def update(dry_run):
+def update(dry_run, add=True):
     today = dt.datetime.now(dt.timezone.utc).date().isoformat()
     manifest = load("manifest.json", {"schemaVersion": 1, "updatedAt": None, "images": []})
     index = load("archive/index.json", {"archives": []})
@@ -324,11 +331,16 @@ def update(dry_run):
     blocked = set(load("blocklist.json", {"items": []})["items"])
 
     images = manifest["images"]
+    # blocklist에 넣은 사진은 이미 사진첩에 있어도 뺀다 (보관하지 않음, 파일은 --prune이 지움)
+    removed_blocked = [entry for entry in images if entry["id"] in blocked or entry.get("title") in blocked]
+    images = [entry for entry in images if entry not in removed_blocked]
+    for entry in removed_blocked:
+        log("  - blocked %s" % entry["id"])
     archived_entries = [entry for archive in index["archives"] for entry in archive["images"]]
     seen = {entry["id"] for entry in images + archived_entries} | blocked
     seen_titles = {entry.get("title") for entry in images + archived_entries if entry["source"] == "wikimedia"} | blocked
 
-    want = INITIAL_COUNT if not images else WIKIMEDIA_PER_RUN
+    want = 0 if not add else INITIAL_COUNT if not images else WIKIMEDIA_PER_RUN
     queue = [title for title in curated if title not in seen_titles]
     log("Library: %d images, %d archived, curated queue: %d" % (len(images), len(archived_entries), len(queue)))
 
@@ -339,7 +351,7 @@ def update(dry_run):
         if info and "wm-%d" % info["pageid"] not in seen and len(picks) < want:
             picks.append(info)
             seen.add("wm-%d" % info["pageid"])
-    if len(picks) < want:
+    if 0 < want and len(picks) < want:
         for info in wikimedia_recent():
             if len(picks) >= want:
                 break
@@ -354,7 +366,7 @@ def update(dry_run):
 
     key = os.environ.get("UNSPLASH_ACCESS_KEY", "").strip()
     unsplash_photos, unsplash_headers = [], {}
-    if key:
+    if key and add:
         candidates, unsplash_headers = unsplash_candidates(key, seen)
         unsplash_photos = candidates[:UNSPLASH_PER_RUN]
         log("Unsplash picks: %d" % len(unsplash_photos))
@@ -398,14 +410,14 @@ def update(dry_run):
             save("archive/index.json", index)
             log("Archived %d images into %s" % (len(archived), name))
 
-    if new_entries or archived:
+    if new_entries or archived or removed_blocked:
         images.sort(key=lambda image: (image["addedAt"], image["id"]), reverse=True)
         save("manifest.json", {
             "schemaVersion": 1,
             "updatedAt": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
             "images": images,
         })
-    log("Library now: %d images (+%d, -%d)" % (len(images), len(new_entries), len(archived)))
+    log("Library now: %d images (+%d, -%d archived, -%d blocked)" % (len(images), len(new_entries), len(archived), len(removed_blocked)))
 
 
 def prune(dry_run):
@@ -423,11 +435,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--prune", action="store_true", help="manifest.json에 없는 library 릴리즈 파일을 지운다")
     parser.add_argument("--dry-run", action="store_true", help="출력만 하고 바꾸지 않는다")
+    parser.add_argument("--no-add", action="store_true", help="새 사진을 넣지 않고 blocklist·보관만 적용한다")
     args = parser.parse_args()
     if args.prune:
         prune(args.dry_run)
     else:
-        update(args.dry_run)
+        update(args.dry_run, add=not args.no_add)
 
 
 if __name__ == "__main__":

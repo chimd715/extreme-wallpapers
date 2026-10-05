@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 0 * * 1"   # 매주 월요일 09:00 (한국 시간)
   workflow_dispatch:
+    inputs:
+      add:
+        description: "새 사진 넣기 (끄면 blocklist와 보관만 적용)"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -30,7 +35,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: python tools/update.py
+        run: python tools/update.py ${{ github.event_name == 'workflow_dispatch' && !inputs.add && '--no-add' || '' }}
 
       - name: Commit the photo list
         run: |
