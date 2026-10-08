@@ -2,6 +2,23 @@
 
 macOS 브라우저 Extreme의 새 탭 배경 사진첩입니다. 모든 사진은 자유 이용 허가가 붙은 사진입니다.
 
+## 예시
+
+2026-10-05 갱신 때 들어온 사진 중 일부입니다. 이 미리보기는 가로 800px로 줄인 것이고, 사진을 누르면 위키미디어 공용 원본 페이지로 갑니다.
+
+<table>
+<tr>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Odles_da_Seceda_da_duman_tl_nibl_Gherd%C3%ABina.jpg"><img src="docs/examples/wm-46685232.jpg" alt="세체다, 돌로미티"></a><br><sub>세체다, 돌로미티 · Wolfgang Moroder · CC BY-SA 3.0</sub></td>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Fiordo_de_Geiranger_desde_Flydalsjuvet,_Noruega,_2019-09-07,_DD_59.jpg"><img src="docs/examples/wm-89656407.jpg" alt="게이랑에르 피오르, 노르웨이"></a><br><sub>게이랑에르 피오르, 노르웨이 · Diego Delso · CC BY-SA 4.0</sub></td>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Lake_Tekapo_01.jpg"><img src="docs/examples/wm-64777520.jpg" alt="테카포 호수, 뉴질랜드"></a><br><sub>테카포 호수, 뉴질랜드 · Krzysztof Golik · CC BY-SA 4.0</sub></td>
+</tr>
+<tr>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Princetown_(AU),_Port_Campbell_National_Park,_Twelve_Apostles_--_2019_--_0930.jpg"><img src="docs/examples/wm-84344099.jpg" alt="12사도 바위, 호주"></a><br><sub>12사도 바위, 호주 · Dietmar Rabich · CC BY-SA 4.0</sub></td>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Salar_de_Uyuni,_Bolivia,_2016-02-04,_DD_10-12_HDR.JPG"><img src="docs/examples/wm-47617647.jpg" alt="우유니 소금사막, 볼리비아"></a><br><sub>우유니 소금사막, 볼리비아 · Diego Delso · CC BY-SA 4.0</sub></td>
+<td width="33%"><a href="https://commons.wikimedia.org/wiki/File:Dead_Vlei_Tree_central.jpg"><img src="docs/examples/wm-83227502.jpg" alt="데드플라이, 나미비아"></a><br><sub>데드플라이, 나미비아 · Daniel Kraft · CC BY-SA 3.0</sub></td>
+</tr>
+</table>
+
 ## 구성
 
 | 위치 | 내용 |
@@ -28,5 +45,5 @@ macOS 브라우저 Extreme의 새 탭 배경 사진첩입니다. 모든 사진�
 
 각 사진의 작가, 이용 허가, 원본 페이지는 `manifest.json`의 `author`, `license`, `licenseUrl`, `page`에 있습니다.
 
-- 위키미디어 공용 사진: 대부분 CC BY-SA. 원본을 가로 2560px로 줄인 것 외에는 바꾸지 않았습니다.
+- 위키미디어 공용 사진: 대부분 CC BY-SA. 원본을 가로 2560px로 줄인 것 외에는 바꾸지 않았습니다. README의 예시 사진(`docs/examples/`)은 가로 800px로 더 줄였습니다.
 - Unsplash 사진: [Unsplash License](https://unsplash.com/license)
